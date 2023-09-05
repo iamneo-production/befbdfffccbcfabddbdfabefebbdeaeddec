@@ -29,7 +29,9 @@ public class TestStringAdvanceMethod {
 		assertEquals("Java@Program", sam.concat("Java@", "Program"));
 		assertEquals("Java  Program", sam.concat("Java ", " Program"));
 		try {
-			// cd ..
+			sam.concat(null, null);
+			sam.concat("Java", null);
+			sam.concat(null, "Java");
 		} catch (IllegalArgumentException e) {
 			e.printStackTrace();
 		}
